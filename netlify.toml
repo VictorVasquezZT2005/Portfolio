@@ -1,0 +1,4 @@
+# netlify.toml (crea este archivo en la raíz)
+[build]
+  base = "portfolio"
+  publish = "portfolio"
