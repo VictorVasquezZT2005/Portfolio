@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <meta name="description" content="Portfolio de Victor Vasquez, Desarrollador con 5 años de experiencia en desarrollo web, aplicaciones móviles y custom ROMs">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Sección principal -->
+    <header class="profile-section">
+      <div class="profile-header">
+        <img class="profile-img" src="img/profile.png" alt="Foto de perfil de Victor Vasquez">
+        <div>
+          <h1 class="profile-title">Victor Vasquez</h1>
+          <h2 class="profile-subtitle">Desarrollador Junior</h2>
+          <div class="tag-list">
+            <span class="tag">Web</span>
+            <span class="tag">Mobile</span>
+            <span class="tag">Backend</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="profile-description">
+        Con 5 años de experiencia como desarrollador, me especializo en diversos ámbitos tecnológicos, incluyendo la creación y personalización de custom ROMs, el desarrollo de páginas web utilizando frameworks modernos, y la construcción de
+        aplicaciones robustas con Laravel.
+      </p>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/victor-vasquez-4555522ba/" target="_blank" class="social-btn linkedin">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+        <a href="https://github.com/VictorVasquezZT2005" target="_blank" class="social-btn github">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://gitlab.com/VictorVasquezZT20051" target="_blank" class="social-btn gitlab">
+          <i class="fab fa-gitlab"></i> GitLab
+        </a>
+      </div>
+    </header>
+
+    <!-- Sección de habilidades -->
+    <section class="skills-section">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS3</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-php"></i>
+          <span>PHP</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-laravel"></i>
+          <span>Laravel</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-node-js"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-rust"></i>
+          <span>Rust</span>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-android"></i>
+          <span>Kotlin</span>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-database"></i>
+          <span>SQL</span>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-c"></i>
+          <span>C#</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de proyectos -->
+    <section class="projects-section">
+      <h2 class="section-title">Proyectos</h2>
+      <div class="projects-grid">
+        <!-- Proyecto 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Custom ROM Development</h3>
+            <div class="project-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <p class="project-description">Desarrollo y mantenimiento de ROMs personalizadas para dispositivos Android.</p>
+          <div class="project-tech">
+            <span>Android</span>
+            <span>Kotlin</span>
+            <span>Java</span>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>E-commerce Platform</h3>
+            <div class="project-links">
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <p class="project-description">Plataforma de comercio electrónico construida con Laravel y Vue.js.</p>
+          <div class="project-tech">
+            <span>Laravel</span>
+            <span>Vue.js</span>
+            <span>MySQL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de contacto simplificada -->
+    <section class="contact-section">
+      <h2 class="section-title">Contacto</h2>
+      <form class="contact-form" action="https://formsubmit.co/vvasquezdv2016@gmail.com" method="POST">
+        <!-- Configuración básica del formulario -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
+
+        <!-- Campos del formulario -->
+        <div class="form-group">
+          <input type="text" name="nombre" placeholder="Nombre completo" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <textarea name="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+      </form>
+    </section>
+  </div>
+
+  <footer class="main-footer">
+    <p>© 2025 Victor Vasquez. Todos los derechos reservados.</p>
+  </footer>
+</body>
+
+</html>
