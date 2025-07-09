@@ -1,14 +1,14 @@
 :root {
-  --primary-color: #6c63ff;
-  --secondary-color: #4d44db;
-  --dark-color: #181818;
-  --light-color: #ffffff;
-  --gray-color: #f5f5f7;
-  --dark-gray: #2d2d2d;
-  --success-color: #28a745;
-  --danger-color: #dc3545;
-  --warning-color: #ffc107;
-  --info-color: #17a2b8;
+  --primary-color: #7f5af0;
+  --secondary-color: #6c4bd1;
+  --dark-color: #0f0e17;
+  --light-color: #fffffe;
+  --gray-color: #a7a9be;
+  --dark-gray: #242629;
+  --accent-color: #2cb67d;
+  --highlight-color: #ff8906;
+  --text-primary: #fffffe;
+  --text-secondary: #94a1b2;
 }
 
 * {
@@ -18,9 +18,9 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--dark-color);
-  color: var(--light-color);
+  color: var(--text-primary);
   line-height: 1.6;
   padding: 0;
   margin: 0;
@@ -32,13 +32,14 @@ body {
   padding: 2rem;
 }
 
-/* Estilos para la sección de perfil */
+/* Sección de perfil */
 .profile-section {
-  background: linear-gradient(135deg, #1e1e1e 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #16161a 0%, #242629 100%);
   border-radius: 16px;
   padding: 2.5rem;
   margin-bottom: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .profile-header {
@@ -54,14 +55,15 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--primary-color);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(127, 90, 240, 0.3);
 }
 
 .profile-title {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--light-color);
+  color: var(--text-primary);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .profile-subtitle {
@@ -77,18 +79,19 @@ body {
 }
 
 .tag {
-  background-color: rgba(108, 99, 255, 0.2);
+  background-color: rgba(127, 90, 240, 0.15);
   color: var(--primary-color);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
+  border: 1px solid rgba(127, 90, 240, 0.3);
 }
 
 .profile-description {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--gray-color);
   line-height: 1.8;
 }
 
@@ -98,40 +101,76 @@ body {
   flex-wrap: wrap;
 }
 
-.social-btn {
+/* Botones especiales */
+.special-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  justify-content: center;
+  padding: 12px 30px;
   color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  margin: 0.5rem 0;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.social-btn i {
-  font-size: 1.1rem;
+.special-btn i {
+  margin-right: 10px;
+  transition: all 0.3s ease;
 }
 
-.linkedin {
-  background-color: #0a66c2;
+.special-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
 }
 
-.github {
-  background-color: #333;
+.special-btn:hover::before {
+  left: 100%;
 }
 
-.gitlab {
-  background-color: #fc6d26;
+.linkedin-btn {
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
 }
 
-.social-btn:hover {
+.github-btn {
+  background: linear-gradient(135deg, #333 0%, #000 100%);
+}
+
+.gitlab-btn {
+  background: linear-gradient(135deg, #fc6d26 0%, #e24329 100%);
+}
+
+.special-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos para la sección de habilidades */
+.special-btn:hover i {
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Sección de habilidades */
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 2rem;
@@ -141,13 +180,13 @@ body {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 0;
   width: 50px;
-  height: 4px;
-  background-color: var(--primary-color);
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
   border-radius: 2px;
 }
 
@@ -157,40 +196,137 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 1.5rem;
 }
 
-.skill-card {
-  background-color: var(--dark-gray);
-  border-radius: 10px;
-  padding: 1.5rem 1rem;
+/* Botones brutalistas */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.brutalist-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 3px solid var(--dark-gray);
+  border-radius: 12px;
+  padding: 0;
+  background-color: var(--main-color);
+  color: #000;
+  font-weight: bold;
+  position: relative;
+  box-shadow: 4px 4px 0px var(--dark-gray);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 130px;
+  width: 130px;
+  cursor: pointer;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-color: var(--primary-color);
+.brutalist-button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -150%;
+  width: 300%;
+  height: 300%;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+  background-color: var(--dark-color);
 }
 
-.skill-card i {
-  font-size: 2.5rem;
-  color: var(--primary-color);
+.tech-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--light-color);
 }
 
-.skill-card span {
-  font-size: 1rem;
-  font-weight: 500;
+.tech-icon {
+  font-size: 50px;
+  color: var(--main-color);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-/* Estilos para la sección de proyectos */
+.button-text {
+  display: flex;
+  align-items: center;
+  line-height: 1.3;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  z-index: 2;
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+}
+
+.button-text span {
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #fff;
+}
+
+.brutalist-button:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+.brutalist-button:hover .tech-logo {
+  animation: spin 5s linear infinite;
+  width: 50px;
+  height: 50px;
+  top: 28%;
+}
+
+.brutalist-button:hover .tech-icon {
+  transform: scale(0.6);
+}
+
+.brutalist-button:hover .button-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brutalist-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0px var(--dark-gray);
+}
+
+.brutalist-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--dark-gray);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Sección de proyectos */
 .projects-section {
   margin-bottom: 3rem;
 }
@@ -205,13 +341,13 @@ body {
   background-color: var(--dark-gray);
   border-radius: 12px;
   padding: 1.5rem;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
   border-color: var(--primary-color);
 }
 
@@ -242,7 +378,7 @@ body {
 }
 
 .project-description {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--gray-color);
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
 }
@@ -254,15 +390,16 @@ body {
 }
 
 .project-tech span {
-  background-color: rgba(108, 99, 255, 0.2);
+  background-color: rgba(127, 90, 240, 0.15);
   color: var(--primary-color);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
+  border: 1px solid rgba(127, 90, 240, 0.3);
 }
 
-/* Estilos para la sección de contacto */
+/* Sección de contacto */
 .contact-section {
   margin-bottom: 3rem;
 }
@@ -281,21 +418,26 @@ body {
   width: 100%;
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: var(--dark-gray);
-  color: var(--light-color);
-  font-family: 'Poppins', sans-serif;
-  transition: border-color 0.3s ease;
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(127, 90, 240, 0.3);
 }
 
 .submit-btn {
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -304,23 +446,43 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  letter-spacing: 1px;
 }
 
 .submit-btn:hover {
-  background-color: var(--secondary-color);
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(127, 90, 240, 0.4);
 }
 
-/* Estilos para el footer */
+/* Footer */
 .main-footer {
   text-align: center;
   padding: 2rem 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-secondary);
   font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Grid layout para perfil y habilidades */
+.profile-skills-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-skills-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .profile-header {
     flex-direction: column;
@@ -336,7 +498,7 @@ body {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
   .projects-grid {
@@ -362,8 +524,55 @@ body {
     font-size: 1.8rem;
   }
 
-  .social-btn {
+  .special-btn {
     padding: 0.7rem 1.2rem;
     font-size: 0.9rem;
   }
+}
+
+/* Estilo para el botón de email */
+.email-btn {
+  background: linear-gradient(135deg, #d44638 0%, #b23121 100%);
+}
+
+.email-btn:hover {
+  background: linear-gradient(135deg, #b23121 0%, #d44638 100%);
+  box-shadow: 0 0 15px #d44638;
+}
+
+/* Estilo para el botón de CV */
+.cv-btn {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.cv-btn:hover {
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+  box-shadow: 0 0 15px #e74c3c;
+}
+
+/* Facebook - Azul oscuro */
+.facebook-btn {
+  background: linear-gradient(135deg, #1877f2 0%, #146cdf 100%);
+}
+.facebook-btn:hover {
+  background: linear-gradient(135deg, #146cdf 0%, #1877f2 100%);
+  box-shadow: 0 0 15px #1877f2;
+}
+
+/* Instagram - Degradado morado/naranja */
+.instagram-btn {
+  background: linear-gradient(135deg, #833ab4 0%, #c13584 50%, #e1306c 100%);
+}
+.instagram-btn:hover {
+  background: linear-gradient(135deg, #e1306c 0%, #c13584 50%, #833ab4 100%);
+  box-shadow: 0 0 15px #c13584;
+}
+
+/* YouTube - Rojo */
+.youtube-btn {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+}
+.youtube-btn:hover {
+  background: linear-gradient(135deg, #cc0000 0%, #ff0000 100%);
+  box-shadow: 0 0 15px #ff0000;
 }

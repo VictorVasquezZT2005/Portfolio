@@ -1,171 +1,385 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Victor Vasquez</title>
+    <meta
+      name="description"
+      content="Portfolio de Victor Vasquez, Desarrollador con 5 años de experiencia en desarrollo web, aplicaciones móviles y custom ROMs"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <meta name="description" content="Portfolio de Victor Vasquez, Desarrollador con 5 años de experiencia en desarrollo web, aplicaciones móviles y custom ROMs">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <div class="container">
-    <!-- Sección principal -->
-    <header class="profile-section">
-      <div class="profile-header">
-        <img class="profile-img" src="img/profile.png" alt="Foto de perfil de Victor Vasquez">
-        <div>
-          <h1 class="profile-title">Victor Vasquez</h1>
-          <h2 class="profile-subtitle">Desarrollador Junior</h2>
-          <div class="tag-list">
-            <span class="tag">Web</span>
-            <span class="tag">Mobile</span>
-            <span class="tag">Backend</span>
-          </div>
-        </div>
-      </div>
-
-      <p class="profile-description">
-        Con 5 años de experiencia como desarrollador, me especializo en diversos ámbitos tecnológicos, incluyendo la creación y personalización de custom ROMs, el desarrollo de páginas web utilizando frameworks modernos, y la construcción de
-        aplicaciones robustas con Laravel.
-      </p>
-
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/victor-vasquez-4555522ba/" target="_blank" class="social-btn linkedin">
-          <i class="fab fa-linkedin-in"></i> LinkedIn
-        </a>
-        <a href="https://github.com/VictorVasquezZT2005" target="_blank" class="social-btn github">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://gitlab.com/VictorVasquezZT20051" target="_blank" class="social-btn gitlab">
-          <i class="fab fa-gitlab"></i> GitLab
-        </a>
-      </div>
-    </header>
-
-    <!-- Sección de habilidades -->
-    <section class="skills-section">
-      <h2 class="section-title">Habilidades Técnicas</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fab fa-html5"></i>
-          <span>HTML5</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-css3-alt"></i>
-          <span>CSS3</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-js"></i>
-          <span>JavaScript</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-php"></i>
-          <span>PHP</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-laravel"></i>
-          <span>Laravel</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-node-js"></i>
-          <span>Node.js</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-python"></i>
-          <span>Python</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-rust"></i>
-          <span>Rust</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-android"></i>
-          <span>Kotlin</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-database"></i>
-          <span>SQL</span>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-c"></i>
-          <span>C#</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sección de proyectos -->
-    <section class="projects-section">
-      <h2 class="section-title">Proyectos</h2>
-      <div class="projects-grid">
-        <!-- Proyecto 1 -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3>Custom ROM Development</h3>
-            <div class="project-links">
-              <a href="#"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
+  <body>
+    <div class="container">
+      <!-- Layout en Grid -->
+      <div class="profile-skills-wrapper">
+        <!-- Sección de perfil -->
+        <section class="profile-section">
+          <div class="profile-header">
+            <img
+              class="profile-img"
+              src="img/profile.png"
+              alt="Foto de perfil de Victor Vasquez"
+            />
+            <div>
+              <h1 class="profile-title">Victor Vasquez</h1>
+              <h2 class="profile-subtitle">Desarrollador Junior</h2>
+              <div class="tag-list">
+                <span class="tag">Web</span>
+                <span class="tag">Mobile</span>
+                <span class="tag">Backend</span>
+              </div>
             </div>
           </div>
-          <p class="project-description">Desarrollo y mantenimiento de ROMs personalizadas para dispositivos Android.</p>
-          <div class="project-tech">
-            <span>Android</span>
-            <span>Kotlin</span>
-            <span>Java</span>
-          </div>
-        </div>
 
-        <!-- Proyecto 2 -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3>E-commerce Platform</h3>
-            <div class="project-links">
-              <a href="#"><i class="fas fa-external-link-alt"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
+          <p class="profile-description">
+            Con 5 años de experiencia como desarrollador, me especializo en
+            diversos ámbitos tecnológicos, incluyendo la creación y
+            personalización de custom ROMs, el desarrollo de páginas web
+            utilizando frameworks modernos, y la construcción de aplicaciones
+            robustas con Laravel.
+          </p>
+          <div class="social-links">
+            <!-- Botones existentes -->
+            <a
+              href="https://www.linkedin.com/in/victor-vasquez-4555522ba/"
+              target="_blank"
+              class="special-btn linkedin-btn"
+            >
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+            <a
+              href="https://github.com/VictorVasquezZT2005"
+              target="_blank"
+              class="special-btn github-btn"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a
+              href="https://gitlab.com/VictorVasquezZT20051"
+              target="_blank"
+              class="special-btn gitlab-btn"
+            >
+              <i class="fab fa-gitlab"></i> GitLab
+            </a>
+            <a
+              href="TU_ENLACE_FACEBOOK"
+              target="_blank"
+              class="special-btn facebook-btn"
+            >
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a
+              href="TU_ENLACE_INSTAGRAM"
+              target="_blank"
+              class="special-btn instagram-btn"
+            >
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a
+              href="TU_ENLACE_YOUTUBE"
+              target="_blank"
+              class="special-btn youtube-btn"
+            >
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a
+              href="mailto:vvasquezdv2016@gmail.com"
+              class="special-btn email-btn"
+            >
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a
+              href="cv/CV_Victor_Vasquez.pdf"
+              download="CV_Victor_Vasquez.pdf"
+              class="special-btn cv-btn"
+            >
+              <i class="fas fa-file-pdf"></i> CV
+            </a>
+          </div>
+        </section>
+
+        <!-- Sección de habilidades -->
+        <section class="skills-section">
+          <h2 class="section-title">Habilidades Técnicas</h2>
+          <div class="skills-grid">
+            <!-- HTML5 -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #e34f26; --dark-color: #c23816"
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-html5 tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>HTML5</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #264de4; --dark-color: #1d3ab2"
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-css3-alt tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>CSS3</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="
+                  --main-color: #f0db4f;
+                  --dark-color: #d6c227;
+                  --text-color: #323330;
+                "
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-js tech-icon" style="color: #323330"></i>
+                </div>
+                <div class="button-text">
+                  <span style="color: var(--text-color)">JavaScript</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- PHP -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #777bb3; --dark-color: #5d619e"
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-php tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>PHP</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Laravel -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #ff2d20; --dark-color: #d6251a"
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-laravel tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>Laravel</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Node.js -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #68a063; --dark-color: #53834e"
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-node-js tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>Node.js</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Python -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #3776ab; --dark-color: #2a5d88"
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-python tech-icon" style="color: #ffd43b"></i>
+                </div>
+                <div class="button-text">
+                  <span>Python</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Rust -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="
+                  --main-color: #000000;
+                  --dark-color: #333333;
+                  --icon-color: #dea584;
+                "
+              >
+                <div class="tech-logo">
+                  <i
+                    class="fab fa-rust tech-icon"
+                    style="color: var(--icon-color)"
+                  ></i>
+                </div>
+                <div class="button-text">
+                  <span>Rust</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Kotlin -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #7f52ff; --dark-color: #6a3df5"
+              >
+                <div class="tech-logo">
+                  <i class="fab fa-android tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>Kotlin</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- SQL -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #00758f; --dark-color: #005a70"
+              >
+                <div class="tech-logo">
+                  <i class="fas fa-database tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>SQL</span>
+                </div>
+              </button>
+            </div>
+
+            <!-- C# -->
+            <div class="button-container">
+              <button
+                class="brutalist-button"
+                style="--main-color: #178600; --dark-color: #126d00"
+              >
+                <div class="tech-logo">
+                  <i class="fas fa-c tech-icon"></i>
+                </div>
+                <div class="button-text">
+                  <span>C#</span>
+                </div>
+              </button>
             </div>
           </div>
-          <p class="project-description">Plataforma de comercio electrónico construida con Laravel y Vue.js.</p>
-          <div class="project-tech">
-            <span>Laravel</span>
-            <span>Vue.js</span>
-            <span>MySQL</span>
+        </section>
+      </div>
+
+      <!-- Sección de proyectos -->
+      <section class="projects-section">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Portfolio Template</h3>
+              <div class="project-links">
+                <a
+                  href="https://portfolio-nine-zeta-550yw497cq.vercel.app/"
+                  target="_blank"
+                  class="project-link"
+                  title="Ver demo en vivo"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a
+                  href="https://github.com/VictorVasquezZT2005/Portfolio"
+                  target="_blank"
+                  class="project-link"
+                  title="Ver código en GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+            <p class="project-description">
+              Plantilla moderna y responsive para portfolio profesional,
+              desarrollada con tecnologías web modernas.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Sección de contacto simplificada -->
-    <section class="contact-section">
-      <h2 class="section-title">Contacto</h2>
-      <form class="contact-form" action="https://formsubmit.co/vvasquezdv2016@gmail.com" method="POST">
-        <!-- Configuración básica del formulario -->
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
+      <!-- Contacto -->
+      <section class="contact-section">
+        <h2 class="section-title">Contacto</h2>
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/vvasquezdv2016@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde tu portfolio"
+          />
+          <div class="form-group">
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Nombre completo"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="mensaje"
+              placeholder="Tu mensaje"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        </form>
+      </section>
+    </div>
 
-        <!-- Campos del formulario -->
-        <div class="form-group">
-          <input type="text" name="nombre" placeholder="Nombre completo" required>
-        </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Correo electrónico" required>
-        </div>
-        <div class="form-group">
-          <textarea name="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Enviar Mensaje</button>
-      </form>
-    </section>
-  </div>
-
-  <footer class="main-footer">
-    <p>© 2025 Victor Vasquez. Todos los derechos reservados.</p>
-  </footer>
-</body>
-
+    <footer class="main-footer">
+      <p>© 2025 Victor Vasquez. Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>
